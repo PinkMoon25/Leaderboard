@@ -1,15 +1,15 @@
-import "./style.css";
-import { addScore, inputName, inputScore, submitBtn } from "./score.js";
+import './style.css';
+import {
+  addScore, inputName, submitBtn,
+} from './score.js';
 
 addScore();
 
-submitBtn.addEventListener('click', (e)=>{
-  e.preventDefault()
-  if(isNaN(inputName.value)) {
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (isNaN(inputName.value)) {   //  eslint-disable-line
     addScore();
-  }
-  else {
+  } else {
     alert('please use letters for name');
-    return;
   }
 });
