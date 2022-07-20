@@ -1,6 +1,6 @@
 import './style.css';
 import {
-  addScore, inputName, submitBtn, refreshBtn, scoreBoard
+  addScore, inputName, submitBtn, refreshBtn, scoreBoard,
 } from './score.js';
 
 submitBtn.addEventListener('click', (e) => {
