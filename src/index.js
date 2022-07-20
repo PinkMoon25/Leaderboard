@@ -1,9 +1,7 @@
 import './style.css';
 import {
-  addScore, inputName, submitBtn,
+  addScore, inputName, submitBtn, refreshBtn, scoreBoard
 } from './score.js';
-
-addScore();
 
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
@@ -13,3 +11,5 @@ submitBtn.addEventListener('click', (e) => {
     alert('please use letters for name');
   }
 });
+
+refreshBtn.addEventListener('click', scoreBoard);
