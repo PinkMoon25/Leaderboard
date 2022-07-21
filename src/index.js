@@ -13,3 +13,5 @@ submitBtn.addEventListener('click', (e) => {
 });
 
 refreshBtn.addEventListener('click', scoreBoard);
+
+document.addEventListener('DOMContentLoaded', scoreBoard);

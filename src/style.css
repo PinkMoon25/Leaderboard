@@ -3,19 +3,33 @@
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  background-color: cornflowerblue;
+  color: #fff;
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: baseline;
+  flex-wrap: wrap;
   gap: 16vw;
 }
 
 h1 {
-  margin-left: 20%;
+  margin: 0;
+  padding: 12px 0;
+  position: relative;
+  left: 20vw;
+  font-weight: bold;
+  font-family: cursive, 'Roboto', sans-serif;
+}
+
+h2 {
+  font-weight: bold;
+  font-family: cursive, 'Roboto', sans-serif;
 }
 
 .recent-score > div {
@@ -32,6 +46,7 @@ h1 {
 
 label {
   margin-bottom: 25px;
+  font-weight: bold;
 }
 
 button {
@@ -40,7 +55,8 @@ button {
   border: none;
   border-radius: 2px;
   color: #fff;
-  background-color: cornflowerblue;
+  background-color: rebeccapurple;
+  font-size: 16px;
   font-weight: bold;
   transition: all 0.3s ease;
 }
@@ -50,7 +66,7 @@ button:hover {
 }
 
 button:active {
-  background-color: rgba(100, 149, 237, 0.7);
+  background-color: rgba(102, 51, 153, 0.5);
 }
 
 .submit {
@@ -61,13 +77,32 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  border: 1px solid gray;
 }
 
 li {
   padding: 4px 8px;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
 li:nth-child(odd) {
-  background-color: rgba(100, 149, 237, 0.7);
+  background-color: rgba(102, 51, 153, 0.8);
+}
+
+input {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 576px) {
+  main {
+    gap: 10vw;
+  }
+
+  .recent-score{
+    padding-bottom: 20px;
+    order: 2;
+  }
 }
