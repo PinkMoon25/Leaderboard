@@ -1,15 +1,18 @@
 import './style.css';
 import {
-  addScore, inputName, submitBtn, refreshBtn, scoreBoard,
+  addScore, submitBtn, refreshBtn, scoreBoard,
 } from './score.js';
+import { inputName, inputScore } from './leaderboard.js';
 
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  if (isNaN(inputName.value)) {   //  eslint-disable-line
+  if (/^[a-zA-Z]*$/gi.test(inputName.value)) {
     addScore();
   } else {
     alert('please use letters for name');
   }
+  inputName.value = '';
+  inputScore.value = '';
 });
 
 refreshBtn.addEventListener('click', scoreBoard);
