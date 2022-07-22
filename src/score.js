@@ -1,14 +1,14 @@
-import { saveUser, getUser } from './leaderboard.js'; //  eslint-disable-line
+import {
+  saveUser, getUser, inputName, inputScore,
+} from './leaderboard.js';
 
 const scoreList = document.querySelector('.score-list');
-const inputName = document.querySelector('#name');
-const inputScore = document.querySelector('#score');
 const submitBtn = document.querySelector('.submit');
 const refreshBtn = document.querySelector('.refresh');
 
 const scoreBoard = async () => {
   const users = await getUser();
-  users.result.sort((a, b) => a.score - b.score);
+  users.result.sort((a, b) => b.score - a.score);
   scoreList.innerText = '';
   users.result.forEach((user) => {
     const score = document.createElement('li');
@@ -23,5 +23,5 @@ const addScore = async () => {
 };
 
 export {
-  addScore, scoreBoard, inputName, inputScore, submitBtn, scoreList, refreshBtn,
+  addScore, scoreBoard, submitBtn, scoreList, refreshBtn,
 };
