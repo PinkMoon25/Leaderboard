@@ -10,6 +10,7 @@ The leaderboard website displays scores submitted by different players. It also 
 
 ## Live Demo
 
+[See live](https://pinkmoon25.github.io/Leaderboard/)
 
 To get a local copy up and running follow these simple example steps.
 
